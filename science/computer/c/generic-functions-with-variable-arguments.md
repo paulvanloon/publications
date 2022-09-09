@@ -78,7 +78,7 @@ Generic evaluators
 
 We looked at genericity and late binding, for generic functions that take a single function argument, with a variable number of parameters.
 By the virtue of the `va_arg` macro in some compilers (e.g. GNU GCC), it *is* supported to keep processing the `va_list` after a call to function that accepts a `va_list` argument.
-That enables a whole class of generic functions, which I call 'generic evaluators`; consider a function `eval` with a variable number of arguments, where the list of variable arguments start after a certain argument 'A'.
+That enables a whole class of generic functions, which I call 'generic evaluators'; consider a function `eval` with a variable number of arguments, where the list of variable arguments start after a certain argument 'A'.
 By convention make the first argument a pointer to a function accepting a `va_list` as at least one of its parameters, or 0. Let the generic evaluator implement:
 ```
 typedef .. V;
